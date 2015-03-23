@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :articles do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
   root to: "articles#index"
   # The priority is based upon order of creation: first created -> highest priority.
