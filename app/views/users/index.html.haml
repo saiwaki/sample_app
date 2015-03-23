@@ -1,5 +1,6 @@
+= link_to 'ログアウト', sessions_path, method: :delete
 %h1 Listing users
-
+= notice
 %table
   %thead
     %tr
@@ -10,10 +11,6 @@
   %tbody
     - @users.each do |user|
       %tr
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New User', new_user_path
+        %td= user.name
+        %td ~
+        %td= user.email

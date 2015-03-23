@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  resource :registraions, only: [:new, :create]
+  resource :registrations, only: [:new, :create]
   resource :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:index]
 
-  root to: "registraions#new"
+  root to: "registrations#new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
