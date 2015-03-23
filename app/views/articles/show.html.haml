@@ -1,0 +1,12 @@
+%h1 show.html.haml
+
+Title:
+= @article.title
+%br
+Text:
+= @article.text
+
+%br
+= link_to 'index', articles_path
+|
+= link_to 'new', new_article_path

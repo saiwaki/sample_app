@@ -1,0 +1,10 @@
+%h1 edit.html.haml
+
+= form_for @article, url: article_path do |f|
+  = f.label :title
+  = f.text_field :title
+  %br
+  = f.label :text  
+  = f.text_area :text
+  %br
+  = f.submit

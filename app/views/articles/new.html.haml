@@ -1,0 +1,19 @@
+%h1 new.html.haml
+
+= form_for @article, url: articles_path do |f|
+  - if @article.errors.any?
+    = pluralize(@article.errors.count, "error")
+    - @article.errors.full_messages.each do |msg|
+      = msg
+  %p
+    = f.label :title
+    = f.text_field :title
+  %p
+    = f.label :text
+    = f.text_area :text
+  %p
+    = f.submit
+
+= link_to 'index', articles_path
+|
+= link_to 'new', new_article_path

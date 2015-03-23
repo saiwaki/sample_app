@@ -1,0 +1,17 @@
+%h1 index.html.haml
+
+- @articles.each do |article|
+  = article.title
+  |
+  = article.text
+  |
+  = link_to 'show', article_path(article)
+  |
+  = link_to 'edit', edit_article_path(article)
+  |
+  = link_to 'delete', article_path(article), method: :delete
+  %br
+
+= link_to 'index', articles_path
+|
+= link_to 'new', new_article_path
