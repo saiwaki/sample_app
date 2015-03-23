@@ -6,6 +6,23 @@ Title:
 Text:
 = @article.text
 
+%h2 Comment
+- @article.comments.each do |comment|
+  = comment.name
+  |
+  = comment.content
+  |
+  = link_to 'Destroy', [comment.article, comment], method: :delete
+  %br
+
+%h2 Comment new
+= form_for([@article, @article.comments.build]) do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :content
+  = f.text_area :content
+  = f.submit
+
 %br
 = link_to 'index', articles_path
 |
