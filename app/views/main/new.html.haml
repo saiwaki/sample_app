@@ -1,0 +1,9 @@
+%h2 new.html.haml
+
+= form_for :main, url: main_create_path do |f|
+  %p
+    = f.label :content
+    %br
+    = f.text_area :content
+  %p
+    = f.submit
