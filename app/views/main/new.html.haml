@@ -1,6 +1,6 @@
 %h2 new.html.haml
 
-= form_for :main, url: main_create_path do |f|
+= form_for @main, url: main_create_path(@main) do |f|
   %p
     = f.label :content
     %br

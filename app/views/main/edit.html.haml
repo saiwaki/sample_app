@@ -1,0 +1,11 @@
+%h2 edit.html.haml
+= @main.inspect
+= main_path(@main)
+
+= form_for @main, url: "/main/update/#{@main.id}" do |f|
+  %p
+    = f.label :content
+    %br
+    = f.text_area :content
+  %p
+    = f.submit

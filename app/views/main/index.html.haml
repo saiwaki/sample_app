@@ -1,4 +1,15 @@
 %h1 Main#index
 %p Find me in app/views/main/index.html.haml
 
+- @contents.each do |content|
+  = content.content
+  |
+  = link_to "show", "show/#{content.id}"
+  |
+  = link_to "edit", "edit/#{content.id}"
+  |
+  = link_to "delete", "destroy/#{content.id}", method: :delete, data: {confirm: "OK?"}
+  %br
+%br
+
 = render "link"

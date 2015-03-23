@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get 'main/index', to: "main#index"
-  get 'main/show', to: "main#show"
+  get 'main/show/:id', to: "main#show"
   get 'main/new', to: "main#new"
   post 'main/create', to: "main#create"
+  get 'main/edit/:id', to: "main#edit"
+  patch 'main/update/:id', to: "main#update"
+  delete 'main/destroy/:id', to: "main#destroy"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
