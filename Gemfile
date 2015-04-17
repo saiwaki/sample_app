@@ -22,6 +22,9 @@ gem 'nokogiri'
 gem 'mini_magick'
 gem 'paper_trail', '~> 3.0.5'
 
+gem 'active_decorator'
+gem 'sidekiq'
+
 group :development do
   # Deploy
   gem 'capistrano', '~> 3.2.1'
@@ -55,6 +58,7 @@ group :test do
   gem 'guard-rspec'
   gem 'launchy'
   gem 'spring'
+  gem 'rails-erd'
 end
 
 group :test, :development do

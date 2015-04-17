@@ -13,29 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150323151133) do
 
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.string   "name"
-    t.text     "content"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
-
-  create_table "mains", force: :cascade do |t|
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",            null: false
     t.string   "crypted_password"
