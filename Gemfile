@@ -24,6 +24,9 @@ gem 'paper_trail', '~> 3.0.5'
 
 gem 'active_decorator'
 gem 'sidekiq'
+gem 'amazon-ecs'
+gem 'instagram'
+gem 'faraday'
 
 group :development do
   # Deploy
