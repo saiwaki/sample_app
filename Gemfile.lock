@@ -28,6 +28,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_decorator (0.5.1)
     activejob (4.2.0)
       activesupport (= 4.2.0)
       globalid (>= 0.3.0)
@@ -115,6 +116,7 @@ GEM
       timers (~> 4.0.0)
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
+    choice (0.1.7)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -283,6 +285,11 @@ GEM
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
+    rails-erd (1.3.1)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+      choice (~> 0.1.6)
+      ruby-graphviz (~> 1.0.4)
     rails-footnotes (4.1.6)
       rails (>= 3.2)
     rails-html-sanitizer (1.0.2)
@@ -327,6 +334,7 @@ GEM
       rspec-mocks (~> 3.2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    ruby-graphviz (1.0.9)
     ruby_parser (3.6.5)
       sexp_processor (~> 4.1)
     rubyzip (1.1.7)
@@ -414,6 +422,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_decorator
   annotate!
   awesome_print
   backbone-on-rails
@@ -454,6 +463,7 @@ DEPENDENCIES
   quiet_assets
   rack-test
   rails (= 4.2.0)
+  rails-erd
   rails-footnotes
   rspec-activemodel-mocks
   rspec-rails
@@ -461,6 +471,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   selenium-webdriver
   shoulda-matchers
+  sidekiq
   slackistrano
   sorcery
   spring

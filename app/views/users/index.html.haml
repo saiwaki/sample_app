@@ -1,0 +1,16 @@
+= link_to 'ログアウト', sessions_path, method: :delete
+%h1 Listing users
+= notice
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td ~
+        %td= user.email
